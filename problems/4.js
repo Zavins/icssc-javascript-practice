@@ -7,7 +7,7 @@
  * @example ["chase", "uci", "apple", "zebra"] -> ["zebra", "uci", "chase", "apple"]
 */
 function problem(words) {
-    return null;
+    return words.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase())).reverse();
 }
 
 const tests = [

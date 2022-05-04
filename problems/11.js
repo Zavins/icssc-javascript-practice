@@ -8,7 +8,13 @@
  * @example "racecar" -> true
 */
 function problem(str) {
-    return null;
+    strArray = str.replaceAll(" ", "").split("")
+    let value = true
+    let reversed = strArray.slice().reverse()
+    reversed.forEach((e, i) => {
+        value = value && e.toLowerCase() === strArray[i].toLowerCase()
+    });
+    return value
 }
 
 const tests = [

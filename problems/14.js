@@ -7,7 +7,16 @@
  * @example [3,2,3] -> 3
 */
 function problem(numbers) {
-    return null;
+    let dict = {}
+    let majority = {key: "", count: 0}
+    numbers.forEach(element => {
+        dict[element] = (dict[element] ?? 0) + 1
+        if (dict[element] > majority.count){
+            majority.key = element
+            majority.value = dict[element] 
+        }
+    });
+    return majority.key
 }
 
 const tests = [
